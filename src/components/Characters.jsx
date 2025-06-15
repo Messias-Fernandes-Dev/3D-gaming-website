@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Star } from "lucide-react"
 
 const Characters = () => {
 
@@ -120,6 +121,47 @@ const Characters = () => {
             <div className="relative bg-gray-900/70 backdrop-blur-sm rounded-lg p-3 border flex lg:flex-row flex-col justify-between px-12 items-center cursor-pointer transition-all duration-300">
 
             <div className="text-lg mb-2">Viki</div>
+
+            {/* Avatar visual placeholder */}
+            <div className="w-20 h-20 bg-gray-800/50 rounded-md items-center justify-center mb-2">
+              <img src="public\images\VIKI.png" alt="VIKI-IMG" />
+            </div>
+
+            {/* Stars rating */}
+            <div className="flex">
+              {[...Array(3)].map((_,i) => (
+                <Star key={i} className="w-4 h-4 fill-violet-400 text-violet-500"/>
+              ))}
+            </div>
+
+            {/* Highlight for selected avatar */}
+            {selectedAvatar === "VIKI" && (
+              <div className="absolute inset-0 border-2 rounded-lg pointer-events-none"></div>
+            )}
+
+            </div>
+
+            {/* VIKI CARD */}
+            <div className="relative bg-gray-900/70 backdrop-blur-sm rounded-lg p-3 border flex lg:flex-row flex-col justify-between px-12 items-center cursor-pointer transition-all duration-300">
+
+            <div className="text-lg mb-2">Viki</div>
+
+            {/* Avatar visual placeholder */}
+            <div className="w-20 h-20 bg-gray-800/50 rounded-md items-center justify-center mb-2">
+              <img src="public\images\VIKI.png" alt="VIKI-IMG" />
+            </div>
+
+            {/* Stars rating */}
+            <div className="flex">
+              {[...Array(3)].map((_,i) => (
+                <Star key={i} className="w-4 h-4 fill-violet-400 text-violet-500"/>
+              ))}
+            </div>
+
+            {/* Highlight for selected avatar */}
+            {selectedAvatar === "VIKI" && (
+              <div className="absolute inset-0 border-2 rounded-lg pointer-events-none"></div>
+            )}
 
             </div>
           </div>
